@@ -1,13 +1,25 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default class App extends React.Component {
+  state = {
+    coords: {},
+  }
+
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(d => {
+      this.setState({ coords: d.coords})
+    })
+  }
+
   render() {
+    const { coords } = this.state
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Text>This is where you are</Text>
+        <Text>latitude: {coords.latitude}</Text>
+        <Text>longitude: {coords.longitude}</Text>
+        <Button title="I'm a button" />
       </View>
     );
   }
