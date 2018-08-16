@@ -1,5 +1,22 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "name": "McGruff Crime Catalog",
+    "slug": "mcgruff-crime-catalog",
+    "sdkVersion": "27.0.0",
+     "ios": {
+      "bundleIdentifier": "McGruff.Crime.Catalog"
+    },
+    "android": {
+      "package": "McGruff.Crime.Catalog",
+      "config": {
+        "googleMaps": { "apiKey": "" }   
+     }
+    },
+    "geoCode": {
+      "provider": "google",
+      "httpAdapter": "https", 
+      "apiKey": "",
+      "formatter": null   
+    }     
   }
 }
