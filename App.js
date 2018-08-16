@@ -4,8 +4,6 @@ import { MapView } from 'expo';
 import Alerts from './Alerts';
 import { MarkerAnimated, Circle } from 'react-native-maps';
 
-const milesToMeters = d => d * 1609.344;
-const feetToMeters = d => d * 0.3048;
 export default class App extends React.Component {
   state = {
     coords: {},
