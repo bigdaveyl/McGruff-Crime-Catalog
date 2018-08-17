@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "499674615284",
+    "firebase_url": "https://mcgruff-crime-catalog.firebaseio.com",
+    "project_id": "mcgruff-crime-catalog",
+    "storage_bucket": "mcgruff-crime-catalog.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499674615284:android:776be0c39cd2bf36",
+        "android_client_info": {
+          "package_name": "McGruff.Crime.Catalog"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499674615284-0c6p15ueqvn7rhul21bnt4pg3341h5om.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrAFyz6eIRQAmu_yQin9Gptca_TxIVIfE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

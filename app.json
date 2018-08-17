@@ -8,6 +8,7 @@
     },
     "android": {
       "package": "McGruff.Crime.Catalog",
+      "googleServicesFile": "./google-services.json",
       "config": {
         "googleMaps": { "apiKey": "" }   
      }
