@@ -3,16 +3,26 @@ import { Button, Slider, StyleSheet, Text, View } from 'react-native';
 import { MapView, Permissions, Notifications } from 'expo';
 import Alerts from './Alerts';
 import { MarkerAnimated, Circle } from 'react-native-maps';
+import * as rssParser from 'react-native-rss-parser';
 
 export default class App extends React.Component {
   state = {
     coords: {},
     token: null,
+    rss: {}
   }
 
   componentDidMount() {
     this.grabLocation()
     this.registerForPushNotifications();
+    fetch('https://www2.monroecounty.gov/911/rss.php')
+      .then((response) => response.text())
+      .then((responseData) => rssParser.parse(responseData))
+      .then((rss) => {
+        console.log(rss.title);
+        console.log(rss.items.length);
+        this.setState( {rss:  rss})
+      });
   }
 
   grabLocation = () => {
@@ -46,7 +56,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { coords, token } = this.state
+    const { coords, token, rss } = this.state
 
     return (
       <View style={styles.container}>
