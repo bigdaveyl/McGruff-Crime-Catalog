@@ -21,6 +21,14 @@ export default class App extends React.Component {
       .then((rss) => {
         console.log(rss.title);
         console.log(rss.items.length);
+        console.log(rss.items);
+	var re = /([0-9]{0,} [A-Z][^a-z]+, [A-Z][a-z]*)/ ;
+	for(var i = 0; i < rss.items.length; i++){
+	  var tempString = rss.items[i].title;
+	  var cleanstring = "";
+	  cleanString = tempString.replace(re, "$1");
+	  console.log(cleanString);
+	}
         this.setState( {rss:  rss})
       });
   }
